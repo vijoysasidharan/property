@@ -30,15 +30,15 @@
             
             <li class="dropdown"><a href="#"><span>Pricing & Plans</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                    <li><a href="index.html">For Buyer</a></li>
-                    <li><a href="index-2.html">For Seller</a></li>
+                    <li><a href="{% url 'buyerpricing' %}">For Buyer</a></li>
+                    <li><a href="{% url 'sellerpricing' %}">For Seller</a></li>
                 </ul>
             </li>
-            <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
             <li class="dropdown"><a href="#"><span>My Account</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                    <li><a href="index.html">Login</a></li>
-                    <li><a href="index-2.html">Register</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
                 </ul>
             </li>
         </ul>

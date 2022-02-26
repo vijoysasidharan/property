@@ -11,6 +11,15 @@ def index(request):
 def about(request):
     return render(request, "about.html")
 
+def contact(request):
+    return render(request, "contact.html")
+
+def buyerpricing(request):
+    return render(request, "buyer-pricing.html")
+
+def sellerpricing(request):
+    return render(request, "seller-pricing.html")
+
 def property_type(request, property_type_slug=None):
     type = None
     properties = None
