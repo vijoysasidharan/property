@@ -64,31 +64,27 @@
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
               <h3>Property Rental Help</h3>
-                <strong>Phone:</strong> +91 9188848860<br>
+                <strong>Phone:</strong> +91 9144484460<br>
                 <strong>Email:</strong> mail@propertyrentalhelp.com<br>
               </p>
             </div>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Property Types</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              {% for type in property_type_links %}
+              <li><i class="bi bi-chevron-right"></i> <a href="{{ type.get_slug_url }}">{{ type.property_type_name }}</a></li>
+              {% endfor %}
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Property Categories</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              {% for category in property_category_links %}
+              <li><i class="bi bi-chevron-right"></i> <a href="{{ category.get_slug_url }}">{{ category.property_category_name }}</a></li>
+              {% endfor %}
             </ul>
           </div>
 

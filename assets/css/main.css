@@ -308,8 +308,8 @@ section {
     visibility: hidden;
   }
   .navbar .dropdown a:hover, .navbar .dropdown .active, .navbar .dropdown .active:focus, .navbar .dropdown:hover > a {
-    color: var(--color-white);
-    background: var(--color-secondary);
+    color: var(--color-secondary);
+    background: var(--color-white);
   }
   .navbar .dropdown ul {
     display: block;
@@ -321,7 +321,7 @@ section {
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    background: var(--color-secondary);
+    background: var(--color-white);
     transition: 0.3s;
   }
   .navbar .dropdown ul li {
@@ -332,7 +332,7 @@ section {
     font-size: 15px;
     text-transform: none;
     font-weight: 400;
-    color: rgba(var(--color-white-rgb), 0.5);
+    color: var(--color-secondary-rgb);
   }
   .navbar .dropdown ul a i {
     font-size: 12px;

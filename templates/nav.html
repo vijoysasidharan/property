@@ -11,38 +11,36 @@
         <nav id="navbar" class="navbar">
         <ul>
 
-            <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <li><a class="nav-link scrollto active" href="{% url 'index' %}">Home</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'about' %}">About</a></li>
+            <li class="dropdown"><a href="#"><span>Property Type</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-                <li><a href="index.html" class="active">Home 1 - index.html</a></li>
-                <li><a href="index-2.html">Home 2 - index-2.html</a></li>
-                <li><a href="index-3.html">Home 3 - index-3.html</a></li>
-                <li><a href="index-4.html">Home 4 - index-4.html</a></li>
+                {% for type in property_type_links %}
+                <li><a href="{{ type.get_slug_url }}">{{ type.property_type_name }}</a></li>
+                {% endfor %}
             </ul>
             </li>
-
-            <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-            <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
-            <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
-            <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-                <li><a href="#">Drop Down 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <li class="dropdown"><a href="#"><span>Property Category</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
+                    {% for category in property_category_links %}
+                    <li><a href="{{ category.get_slug_url }}">{{ category.property_category_name }}</a></li>
+                    {% endfor %}
                 </ul>
-                </li>
-                <li><a href="#">Drop Down 2</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
-            </ul>
+            </li>            
+            
+            <li class="dropdown"><a href="#"><span>Pricing & Plans</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                    <li><a href="index.html">For Buyer</a></li>
+                    <li><a href="index-2.html">For Seller</a></li>
+                </ul>
             </li>
             <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+            <li class="dropdown"><a href="#"><span>My Account</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                    <li><a href="index.html">Login</a></li>
+                    <li><a href="index-2.html">Register</a></li>
+                </ul>
+            </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
         </nav><!-- .navbar -->
