@@ -2031,7 +2031,7 @@ section {
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
-.contact .php-email-form input[type=text], .contact .php-email-form input[type=email], .contact .php-email-form textarea {
+.contact .php-email-form input[type=text], .contact .php-email-form input[type=email], .contact .php-email-form textarea, .php-email-form input[type=password] {
   border-radius: 0px;
   box-shadow: none;
   font-size: 14px;
@@ -2039,13 +2039,13 @@ section {
 .contact .php-email-form input[type=text]:focus, .contact .php-email-form input[type=email]:focus, .contact .php-email-form textarea:focus {
   border-color: var(--color-secondary-light);
 }
-.contact .php-email-form input[type=text], .contact .php-email-form input[type=email] {
-  height: 48px;
+.contact .php-email-form input[type=text], .contact .php-email-form input[type=email], .php-email-form input[type=password] {
+  /*height: 48px;*/
   padding: 10px 15px;
 }
 .contact .php-email-form textarea {
   padding: 10px 12px;
-  height: 290px;
+  height: 90px;
 }
 .contact .php-email-form button[type=submit] {
   background: var(--color-primary);

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %} 
+<main id="main">
+    <section id="contact" class="contact mt-5">
+        <div class="container" data-aos="fade-up">  
+          <div class="section-header">
+            <h3 class="text-primary">USER LOGIN</h3>
+          </div>  
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <form id="login-form" role="form" class="php-email-form">
+                        {% csrf_token %}
+                      <div class="row">
+                        <div class="col-md-6 form-group mt-3">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="col-md-6 form-group mt-3">
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                      </div>
+                      <div class="text-center mt-3"><button type="submit" class="btn-login">LOGIN</button></div>
+                    </form>
+                  </div><!-- End Contact Form -->
+                  <div class="col-lg-2"></div>
+                    <div class="col-lg-12 text-center mt-5">
+                      <p>Not registered? Click <a href="{% url 'register' %}">here</a> Register.</p>
+                    </div>
+            </div>
+        </div>
+
+</main><!-- End #main -->
+{% endblock %}

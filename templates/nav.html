@@ -2,7 +2,7 @@
 <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-        <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <a href="{% url 'index' %}" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>Property Help<span>.</span></h1>
@@ -36,10 +36,16 @@
             </li>
             <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
             <li class="dropdown"><a href="#"><span>My Account</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                {% if user.is_authenticated %}
+                <ul>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+                {% else %}
                 <ul>
                     <li><a href="{% url 'login' %}">Login</a></li>
                     <li><a href="{% url 'register' %}">Register</a></li>
                 </ul>
+                {% endif %}
             </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
